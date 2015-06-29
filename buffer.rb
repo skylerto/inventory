@@ -1,4 +1,4 @@
-re 'singleton'
+require 'singleton'
 class Buffer
   include Singleton
   @buffer = []

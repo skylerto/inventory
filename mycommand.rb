@@ -1,7 +1,8 @@
 # Parse the input
 
-#require_relative 'commands.rb'
-#require_relative 'invokers.rb'
+require_relative 'commands/command'
+require_relative 'invokers'
+require_relative 'bufferinvoker'
 
 module Parser
 
@@ -12,6 +13,7 @@ module Parser
   def Parser.parse
     
     puts "Structure: {command} {arguments*}"
+    invoker = BufferInvoker.new()
 
     begin
       print "% "
@@ -22,6 +24,8 @@ module Parser
   
       # Check if add/paste 
       if command == "add" or command == "paste"
+        exe = AddCommand.new(args[0], args[1].to_i)
+        invoker.do(exe)
         puts "Command: #{command}"
         puts "Arguments: #{args}" 
       end
