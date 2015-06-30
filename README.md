@@ -1,3 +1,20 @@
+#Inventory
+
+##What and Why
+
+A command line application developed in vanilla Ruby from the ground up without any helps. Mainly made this application to gain experience with Ruby design patterns and implementation. 
+
+##How to use
+
+Clone and run
+```Ruby
+  ruby run.rb
+```
+
+##Tests
+
+No testing suite was used, as I went full vanilla and wrote the tests with ruby modules myself.
+
 ##LICENSE:
 
 (The MIT License)
