@@ -1,6 +1,4 @@
 require_relative 'exceptions'
-require_relative 'outputformatter'
-
 
 class Bag
   include Enumerable
@@ -15,9 +13,14 @@ class Bag
   def has?(amount, item)
     @bag.has_key?(item) and @bag[item] >= amount
   end
+
+  #def <=>(other)
+  #  bag.value <=> other.value
+  #end
   
   ## => Insertions / Deletions
   def add(amount, item)
+  
     unless amount > 0  
       raise Exceptions::NotEnoughError
       "Value must be greater than 0"

@@ -1,4 +1,4 @@
-require_relative 'bag'
+require_relative '../bag'
 module  Test
   def Test.setup
    puts "*Setup testing suite*"
@@ -17,9 +17,9 @@ module  Test
     @bag.print
     puts ""
    
-    puts "  -> Add a negative number"
-    @bag.add(-1, "Things")
-    puts ""
+   # puts "  -> Add a negative number"
+   # @bag.add(-1, "Things")
+   # puts ""
 
     puts "  -> Create new bag and add items"
     other = Bag.new
@@ -38,12 +38,15 @@ module  Test
    @bag.print
   end
 
-  def Test.has
+  def Test.bools
     puts @bag.has?(11, "Cats") ? "I do have 11 cats" : "I don't have 11 cats"
+    one = Bag.new
+    two = Bag.new
+    puts one.eql?(two)
   end
 end
 
 Test::setup
 Test::add
 Test::remove
-Test::has
+Test::bools
