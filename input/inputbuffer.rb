@@ -1,4 +1,10 @@
 require 'singleton'
+
+
+# Use a hash to store the command as the key
+# and a list of arguments as the value.
+# Store all that in an array so we know what's
+# happened first.
 class InputBuffer
   include Singleton
   @buffer = []
@@ -6,8 +12,10 @@ class InputBuffer
     @buffer = []
   end
 
-  def insert(n, token)
-    @buffer.insert( n, token )
+  def insert(command, *args)
+    item = Hash.new
+    item[command] = args
+    @buffer << item
   end
 
   def string()
