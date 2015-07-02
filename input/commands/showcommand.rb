@@ -1,6 +1,8 @@
 require_relative 'command'
 require_relative '../inputbuffer'
 require_relative '../../system/inventory'
+require_relative '../../output/outputbuffer'
+
 
 class ShowCommand < Command
 
@@ -9,7 +11,7 @@ class ShowCommand < Command
   end
 
   def execute()
-    puts Inventory.instance.print
+    OutputBuffer.instance.insert(Inventory.instance.print)
   end
 
   def unexecute()

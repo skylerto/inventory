@@ -6,12 +6,14 @@ class OutputBuffer
     @buffer = []
   end
 
-  def insert(n, token)
-    @buffer.insert( n, token )
+  def insert(token)
+    @buffer << token
   end
 
   def string()
-    return @buffer.join( " " )
+    buff = @buffer.join( "\n" )
+    @buffer = []
+    return buff
   end
 
   def remove(n)

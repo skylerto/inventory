@@ -6,6 +6,8 @@ require_relative 'invokers'
 require_relative 'bufferinvoker'
 require_relative '../system/inventory'
 require_relative '../system/bag'
+require_relative '../output/outputbuffer'
+
 module Parser
 
  def Parser.pp
@@ -14,10 +16,10 @@ module Parser
   # Begin the parseing of input
   def Parser.parse
     commands = ["add {item} {amount}", "order {item} {amount} ... ", "show", "check {item} {amount}"]
-    puts "Structure: {command} {arguments*}"
-    puts commands
+    OutputBuffer.instance.insert("Structure: {command} {arguments*}")
+    OutputBuffer.instance.insert(commands)
     @invoker = BufferInvoker.new()
-
+    puts OutputBuffer.instance.string
     begin
       print "% "
       #Parser::pp
@@ -58,10 +60,13 @@ module Parser
       else
         puts "Command not valid"
       end
-      Inventory.instance.print unless command.eql?("show")
+      
+      OutputBuffer.instance.insert(Inventory.instance.print) unless command == "show"
+      puts OutputBuffer.instance.string 
     end until command == "exit"
-    puts "Finishing up.."
-    puts "Done"
+    OutputBuffer.instance.insert("Finishing up..")
+    OutputBuffer.instance.insert("Done")
+    puts OutputBuffer.instance.string
   end
 end
 

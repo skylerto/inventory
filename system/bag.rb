@@ -72,7 +72,15 @@ class Bag
   ## => Formating
   # Let me know how many things are in my bag man.
   def print
-    puts "Current Inventory"
-    @bag.each {|item, amount| puts "  #{item}: #{amount}"}
+    buffer = []
+    if @bag.empty?
+      buffer << "Bag is empty"
+    else
+      buffer << "Current Inventory"
+      @bag.each do |item, amount| 
+        buffer << "  #{item}: #{amount}"
+      end
+    end
+    buffer
   end
 end
