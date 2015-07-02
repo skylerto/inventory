@@ -1,6 +1,8 @@
 require_relative 'command'
 require_relative '../inputbuffer'
 require_relative '../../system/inventory'
+require_relative '../../output/outputbuffer'
+
 
 class CheckCommand < Command
 
@@ -11,7 +13,13 @@ class CheckCommand < Command
   end
 
   def execute()
-    puts Inventory.instance.has?(@amount, @item)
+    if Inventory.instance.has?(@amount, @item)
+      message = "Yes, #{@amount} #{@item} are available"
+    else
+      message = "No, #{@amount} #{@item} are not available"
+    end
+    OutputBuffer.instance.insert(message)
+   
   end
 
   def unexecute()
