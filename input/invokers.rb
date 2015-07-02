@@ -1,3 +1,4 @@
+# Invoker executes each command
 class Invoker
   def initialize()
     @queue = []

@@ -1,4 +1,4 @@
-require_relative '../buffer'
+require_relative '../inputbuffer'
 
 # Abstract command
 class Command
