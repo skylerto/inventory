@@ -22,9 +22,9 @@ class InputBuffer
     return @buffer.join( " " )
   end
 
-  def remove(n)
-    val = @buffer[n]
-    @buffer.delete_at(n)
+  def remove(item)
+    val = @buffer.index(item)
+    @buffer.delete(val)
     return val
   end
 end

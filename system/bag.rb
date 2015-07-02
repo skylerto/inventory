@@ -20,11 +20,14 @@ class Bag
   
   ## => Insertions / Deletions
   def add(amount, item)
-  
+   
     unless amount > 0  
       raise Exceptions::NotEnoughError
       "Value must be greater than 0"
     end
+    #if @bag.empty?
+    # puts "bag is empty!" 
+    #els
     if @bag.has_key?(item) 
      @bag[item] += amount
     else
@@ -40,12 +43,24 @@ class Bag
 
   # Someone bought my things
   def remove(amount, item)
-    @bag[item] -= amount unless amount >= @bag[item]
+    if  @bag.empty?
+      puts "empty bag"
+      return
+    elsif !self.has?(amount, item) 
+     puts "not enough"
+    else
+      @bag[item] -= amount
+    end
   end
 
   def remove_all(other)
-    other.each do |item, amount|
-      @bag.remove(amount, items)
+    if  @bag.empty?
+      puts "empty bag"
+      return
+    else
+      other.each do |item, amount|
+        self.remove(amount, item)
+      end
     end
   end
 
