@@ -1,5 +1,7 @@
 #Inventory
 
+Lets see if we can turn this into a gem!
+
 ##What and Why
 
 A command line application developed in vanilla Ruby from the ground up without any helps. Mainly made this application to gain experience with Ruby design patterns and implementation. 
