@@ -11,11 +11,47 @@ describe Inventory do
     expect(System::Inventory.has?(3, "Tests"))
   end
 
+  it 'can has items' do
+    expect(System::Inventory.has?(1, "" == false))
+  end
+
+ it 'can add all from another bag' do
+    bag_other = Bag.new
+    bag_other.add(2, "cats")
+    bag_other.add(1, "dogs")
+
+    System::Inventory.add_all(bag_other)
+    expect(System::Inventory.has?(1, "dogs"))
+    expect(System::Inventory.has?(2, "cats"))
+  end
+
+
   it 'remove some from inventory' do
     System::Inventory.add(10,"Tests")
     System::Inventory.remove(5, "Tests")
     expect(System::Inventory.has?(5, "Tests"))
   end
+
+  it 'can remove all from another bag' do
+    System::Inventory.add(4, "cats")
+    System::Inventory.add(2, "dogs")
+    bag_other = Bag.new
+    bag_other.add(2, "cats")
+    bag_other.add(1, "dogs")
+
+    System::Inventory.remove_all(bag_other)
+    expect(System::Inventory.has?(1, "dogs"))
+    expect(System::Inventory.has?(2, "cats"))
+  end
+
+  it 'can print' do
+    expect(System::Inventory.print === "Current Inventory")
+
+    System::Inventory.add(2, "cats")
+    expect(System::Inventory.print === "cats: 2")
+  end
+
+
 end
 
 describe Bag do

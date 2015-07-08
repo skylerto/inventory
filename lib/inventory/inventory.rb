@@ -15,6 +15,10 @@ class Inventory
     @bag.add(amount, item)
   end
 
+  def self.add_all(bag)
+    @bag.add_all(bag)
+  end
+
   def self.remove_all(bag)
     @bag.remove_all(bag)
   end
