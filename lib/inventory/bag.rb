@@ -7,10 +7,18 @@ class Bag
     @bag = Hash.new
   end
 
+  def size
+    @bag.size
+  end
+
   ## => Booleans
   #Do we have the item?
   def has?(amount, item)
     @bag.has_key?(item) and @bag[item] >= amount
+  end
+
+  def empty?
+    @bag.size == 0
   end
 
   ## => Insertions / Deletions
