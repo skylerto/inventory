@@ -1,30 +1,41 @@
-#Inventory
+# Inventory
 
-Lets see if we can turn this into a gem!
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/inventory`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-##What and Why
+TODO: Delete this and the text above, and describe your gem
 
-A command line application developed in vanilla Ruby from the ground up without any helps. Mainly made this application to gain experience with Ruby design patterns and implementation. 
+## Installation
 
-##How to use
+Add this line to your application's Gemfile:
 
-Clone and run
-```Ruby
-  ruby run.rb
+```ruby
+gem 'inventory'
 ```
 
-##Tests
+And then execute:
 
-No testing suite was used, as I went full vanilla and wrote the tests with ruby modules myself.
+    $ bundle
 
-##LICENSE:
+Or install it yourself as:
 
-(The MIT License)
+    $ gem install inventory
 
-Copyright (c) 2015 Skyler Layne
+## Usage
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+TODO: Write usage instructions here
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+## Development
 
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/inventory.
+
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
