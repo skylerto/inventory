@@ -1,5 +1,4 @@
 # Inventory
-
 [![Build
 Status](https://travis-ci.org/skylerto/inventory.svg?branch=gemify)](https://travis-ci.org/skylerto/inventory)
 [![Code
