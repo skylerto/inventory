@@ -15,16 +15,16 @@ Manage inventory with this.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'inventory'
+gem 'inventory-cli'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it yourself as for the cli by:
 
-    $ gem install inventory
+    $ gem install inventory-cli
 
 ## Usage
 
