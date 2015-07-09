@@ -1,5 +1,7 @@
 # Inventory
 
+[![Join the chat at https://gitter.im/skylerto/inventory](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/skylerto/inventory?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build
 Status](https://travis-ci.org/skylerto/inventory.svg?branch=gemify)](https://travis-ci.org/skylerto/inventory)
 [![Code
