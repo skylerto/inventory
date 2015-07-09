@@ -10,3 +10,7 @@ Feature: Inventory
   Scenario: Removing from an empty bag
     When I run `inventory remove 5 cats`
     Then the output should contain "Bag is empty"
+
+  Scenario: Receiving shipments
+
+  Scenario: Adding orders
