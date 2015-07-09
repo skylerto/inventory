@@ -6,6 +6,8 @@ Status](https://travis-ci.org/skylerto/inventory.svg?branch=gemify)](https://tra
 Climate](https://codeclimate.com/repos/559e8e1869568031df008616/badges/3d6f92dd7401a8c34ce6/gpa.svg)](https://codeclimate.com/repos/559e8e1869568031df008616/feed)
 [![Coverage
 Status](https://coveralls.io/repos/skylerto/inventory/badge.svg?branch=master&service=github)](https://coveralls.io/github/skylerto/inventory?branch=master)
+[![Dependency
+Status](https://gemnasium.com/skylerto/inventory.svg)](https://gemnasium.com/skylerto/inventory)
 
 Manage inventory with this.
 
