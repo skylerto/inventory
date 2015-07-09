@@ -1,5 +1,11 @@
 # Inventory
 
+[![Build
+Status](https://travis-ci.org/skylerto/inventory.svg?branch=gemify)](https://travis-ci.org/skylerto/inventory)
+[![Code
+Climate](https://codeclimate.com/repos/559e8e1869568031df008616/badges/3d6f92dd7401a8c34ce6/gpa.svg)](https://codeclimate.com/repos/559e8e1869568031df008616/feed)
+
+
 Manage inventory with this.
 
 ## Installation
