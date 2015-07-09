@@ -6,7 +6,10 @@ class Bag
   def initialize
     @bag = Hash.new
   end
-  
+
+  def size
+    @bag.size
+  end
 
   ## => Booleans
   #Do we have the item?
@@ -14,20 +17,17 @@ class Bag
     @bag.has_key?(item) and @bag[item] >= amount
   end
 
-  #def <=>(other)
-  #  bag.value <=> other.value
-  #end
-  
+  def empty?
+    @bag.size == 0
+  end
+
   ## => Insertions / Deletions
   def add(amount, item)
-   
-    unless amount > 0  
+
+    unless amount > 0
       raise Exceptions::NotEnoughError
       "Value must be greater than 0"
     end
-    #if @bag.empty?
-    # puts "bag is empty!" 
-    #els
     if @bag.has_key?(item) 
      @bag[item] += amount
     else
