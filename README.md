@@ -11,7 +11,7 @@ Status](https://coveralls.io/repos/skylerto/inventory/badge.svg?branch=master&se
 [![Dependency
 Status](https://gemnasium.com/skylerto/inventory.svg)](https://gemnasium.com/skylerto/inventory)
 
-Manage inventory with this.
+Manage inventory with this, no db though.
 
 ## Installation
 
