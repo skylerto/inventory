@@ -9,6 +9,7 @@ describe Inventory do
   it 'adds to the inventory' do
     System::Inventory.add(3, "Tests")
     expect(System::Inventory.has?(3, "Tests"))
+    System::Inventory.remove(3, "Tests")
   end
 
   it 'can has items' do
@@ -23,6 +24,10 @@ describe Inventory do
     System::Inventory.add_all(bag_other)
     expect(System::Inventory.has?(1, "dogs"))
     expect(System::Inventory.has?(2, "cats"))
+    
+    System::Inventory.remove(1, "dogs")
+    System::Inventory.remove(2, "cats")
+  
   end
 
 
@@ -30,6 +35,7 @@ describe Inventory do
     System::Inventory.add(10,"Tests")
     System::Inventory.remove(5, "Tests")
     expect(System::Inventory.has?(5, "Tests"))
+    System::Inventory.remove(5, "Tests")
   end
 
   it 'can remove all from another bag' do
@@ -42,6 +48,10 @@ describe Inventory do
     System::Inventory.remove_all(bag_other)
     expect(System::Inventory.has?(1, "dogs"))
     expect(System::Inventory.has?(2, "cats"))
+
+    System::Inventory.remove(2, "cats")
+    System::Inventory.remove(1, "dogs")
+   
   end
 
   it 'can print' do
@@ -49,6 +59,8 @@ describe Inventory do
 
     System::Inventory.add(2, "cats")
     expect(System::Inventory.print === "cats: 2")
+    System::Inventory.remove(2, "cats")
+   
   end
 
 
@@ -76,6 +88,7 @@ describe Bag do
     bag = Bag.new
     bag.add(5, "cats")
     expect(bag.has?(5,"cats"))
+    bag.remove(5, "cats")
   end
 
   it 'can add all from another bag' do
@@ -87,6 +100,8 @@ describe Bag do
     bag.add_all(bag_other)
     expect(bag.has?(1, "dogs"))
     expect(bag.has?(2, "cats"))
+    bag.remove(2, "cats")
+    bag.remove(1, "dogs")
   end
 
   it 'can be removed from' do
@@ -105,8 +120,10 @@ describe Bag do
     bag_other.add(1, "dogs")
 
     bag.remove_all(bag_other)
-    expect(bag.has?(1, "dogs"))
-    expect(bag.has?(2, "cats"))
+    expect(bag.has?(6, "dogs"))
+    expect(bag.has?(3, "cats"))
+    bag.remove(6, "dogs")
+    bag.remove(3, "cats")
   end
 
   it 'can print' do
@@ -115,6 +132,7 @@ describe Bag do
 
     bag.add(2, "cats")
     expect(bag.print === "cats: 2")
+    bag.remove(2, "cats")
   end
 
 end

@@ -16,7 +16,7 @@ class Inventory
       puts "Value must be less that 2147483647"
     else
         @bag.add(amount, item)
-      end
+    end
   end
 
   def self.add_all(bag)
