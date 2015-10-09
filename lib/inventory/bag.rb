@@ -81,20 +81,10 @@ class Bag
   def print
     buffer = []
     Thing.find_each do |a|
+      if a.amount > 0
         buffer << " #{a.name}: #{a.amount}"
+      end
     end
-    #buffer << " #{Thing.all}"
-  
-#    if @bag.empty?
- #     buffer << "Bag is empty"
-  #  else
-   #   buffer << "Current Inventory"
-    #  @bag.each do |item, amount| 
-     #   buffer << " #{Thing.find()}"
-  
-        #"  #{item}: #{amount}"
-     # end
-   # end
     buffer
   end
 end
