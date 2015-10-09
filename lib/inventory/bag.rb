@@ -1,4 +1,5 @@
 require_relative 'exceptions'
+require_relative 'dbconnection'
 
 class Bag
   include Enumerable
@@ -30,8 +31,14 @@ class Bag
     end
     if @bag.has_key?(item) 
      @bag[item] += amount
+
+     # find it in the database
+     the_item = Thing.find_by(name: item)
+     the_item += amount
+     the_item.save
     else
      @bag[item] = amount
+     Thing.create(:name => item, :amount => amount)
     end
   end
 
