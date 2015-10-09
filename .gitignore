@@ -7,3 +7,7 @@
 /pkg/
 /spec/reports/
 /tmp/
+.mysql-credentials.txt
+bin/*.swp
+lib/*.swp
+lib/**/*.swp

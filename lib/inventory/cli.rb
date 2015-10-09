@@ -1,5 +1,5 @@
 require 'thor'
-require 'inventory'
+require_relative 'inventory'
 module Inventory
     class CLI < Thor
 
