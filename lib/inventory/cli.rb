@@ -14,5 +14,11 @@ module Inventory
         System::Inventory.remove(amount.to_i, item)
         puts System::Inventory.print
       end
+
+      desc "invoice NAME args*", "Create an invoice"
+      def invoice(name, *args)
+        System::Inventory.invoice(name, args)
+        puts System::Inventory.print
+      end
     end
 end
