@@ -1,11 +1,16 @@
 require_relative 'exceptions'
 require_relative 'dbconnection'
 
-class Bag
+class Order << ActiveRecord::Base
   include Enumerable
   # Create the bag
-  def initialize
-    @bag = Hash.new
+  def initialize(name)
+     @bag = Hash.new
+
+     create_table :"#{name}" do |t|
+       t.string :item, null:false
+       t.int :amount, null:false
+      end
   end
 
   def size
