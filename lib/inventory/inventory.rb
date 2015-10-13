@@ -55,6 +55,7 @@ class Inventory
   end
 
   def self.print
+    puts "INVENTORY: "
     @bag.print
   end
 end
