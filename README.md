@@ -32,7 +32,7 @@ Or install it yourself as for the cli by:
 Add a table to manage:
 
 ```bash
-$ gem install inventory-cli
+$ mysql -uroot
 CREATE TABLE inventory;
 ```
 ## Usage
