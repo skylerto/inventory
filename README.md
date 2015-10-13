@@ -58,3 +58,4 @@ The gem is available as open source under the terms of the [MIT License](http://
 
  - Add some way to control orders, look at how rails goes about `rails generate
    ...` vs `rails server` for inspiration.
+ - Add a script to create a database off the start, maybe like `inventory install`.
