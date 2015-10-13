@@ -82,7 +82,7 @@ class Bag
     buffer = []
     Thing.find_each do |a|
       if a.amount > 0
-        buffer << " #{a.name}: #{a.amount}"
+        buffer << "    #{a.name}: #{a.amount}"
       end
     end
     buffer
