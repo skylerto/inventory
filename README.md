@@ -11,7 +11,7 @@ Status](https://coveralls.io/repos/skylerto/inventory/badge.svg?branch=master&se
 [![Dependency
 Status](https://gemnasium.com/skylerto/inventory.svg)](https://gemnasium.com/skylerto/inventory)
 
-Manage inventory with this, no db though.
+Manage inventory with this and mysql.
 
 ## Installation
 
@@ -29,6 +29,12 @@ Or install it yourself as for the cli by:
 
     $ gem install inventory-cli
 
+Add a table to manage:
+
+```bash
+$ gem install inventory-cli
+CREATE TABLE inventory;
+```
 ## Usage
 
 no
