@@ -36,4 +36,6 @@ Gem::Specification.new do |spec|
 
   # Production dependencies
   spec.add_dependency "thor"
+  spec.add_dependency "activerecord"
+  spec.add_dependency "mysql"
 end
