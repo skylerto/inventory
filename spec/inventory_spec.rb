@@ -24,10 +24,9 @@ describe Inventory do
     System::Inventory.add_all(bag_other)
     expect(System::Inventory.has?(1, "dogs"))
     expect(System::Inventory.has?(2, "cats"))
-    
+
     System::Inventory.remove(1, "dogs")
     System::Inventory.remove(2, "cats")
-  
   end
 
 
@@ -51,7 +50,7 @@ describe Inventory do
 
     System::Inventory.remove(2, "cats")
     System::Inventory.remove(1, "dogs")
-   
+
   end
 
   it 'can print' do
@@ -60,7 +59,7 @@ describe Inventory do
     System::Inventory.add(2, "cats")
     expect(System::Inventory.print === "cats: 2")
     System::Inventory.remove(2, "cats")
-   
+
   end
 
 
