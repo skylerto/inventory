@@ -35,9 +35,20 @@ Add a table to manage:
 $ mysql -uroot
 CREATE TABLE inventory;
 ```
+
 ## Usage
 
-no
+After installation, to get a list of available commands run
+```
+$ inventory
+Commands:
+  inventory add AMOUNT ITEM     # Add an amount of an item
+  inventory help [COMMAND]      # Describe available commands or one specific command
+  inventory invoice NAME args*  # Create an invoice
+  inventory remove AMOUNT ITEM  # Remove an amount of an item
+  inventory show                # Shows the current state of the inventory
+```
+
 
 ## Development
 
